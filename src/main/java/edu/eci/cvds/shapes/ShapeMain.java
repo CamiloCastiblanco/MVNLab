@@ -12,6 +12,7 @@ public class ShapeMain {
             String shapeType = myObj.nextLine();
             shapes[0] = shapeType;
         }
+
         try {
 
             RegularShapeType type = RegularShapeType.valueOf(shapes[0]);
@@ -19,7 +20,7 @@ public class ShapeMain {
             System.out.println(String.format("Successfully created a %s with %s sides.", type,
                     shape.getNumberOfEdges()));
         } catch (IllegalArgumentException ex) {
-            System.err.println("Parameter '" + args[0] + "' is not a valid RegularShapeType");
+            System.err.println("Parameter '" + shapes[0] + "' is not a valid RegularShapeType");
             return;
         }
     }
